@@ -1,0 +1,2 @@
+set -ex
+python test_star.py --how_many 80000 --which_epoch latest --dataroot /home/wanggh/magic/magic_paper --name starres_paper --suffix 1 --which_model_netG starresnet_6blocks --model star --input_nc 24 --output_nc 1 --gpu_ids 0 --dataset_mode magic

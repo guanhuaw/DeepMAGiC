@@ -1,0 +1,2 @@
+set -ex
+python train.py --nThreads 8 --contrast t2flair --dataroot /home/wanggh/magic/magic_paper --name onecontrastunett2flair --model magic_basic --gpu_ids 0 --dataset_mode magic --display_id -1 --display_port -1 --display_ncols -1 --suffix 1 --loss_content_I_l1 100.0 --loss_content_I_l2 400.0 --loss_ssim 0.5 --use_vgg --loss_vgg 0.5 --which_model_netG unet_256 --batchSize 4 --train_phase generator --continue_train --display_freq 35
