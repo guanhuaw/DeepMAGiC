@@ -26,7 +26,7 @@ class magicdataset(BaseDataset):
         pdfse = Atemp['pdfse'] / 255
         stir = Atemp['stir'] / 255
 
-        # Generate the mask mapping out the air. Not stable. The results are similar.
+        # Generate the mask mapping out the air using the morphology method. Not stable.
         sumofsix = t2flair + t1fse + t2fse + t1flair + stir + pdfse + np.sum(magic[0:3:, :, :], 0)
         mask1 = sumofsix > 0.025*np.random.rand()
         mask = image.morphology.binary_fill_holes(mask1)
@@ -93,5 +93,4 @@ class magicdataset(BaseDataset):
 
     def name(self):
         return 'MagicDataset'
-
 #  generate mask based on alpha

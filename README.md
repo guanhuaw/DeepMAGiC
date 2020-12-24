@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This project aims to generate multiple conventional clinical MRI contrasts from multi-echo input (MDME), using a multi-task conditional GAN.
+This project aims to generate multiple conventional clinical MRI contrasts from multi-echo sequences (MDME), using a multi-task conditional GAN.
 
-The submission, titled 'Synthesize High-quality Multi-contrast Magnetic Resonance Imaging from Multi-echo Acquisition Using Multi-task Deep Generative Model' has been accepted by IEEE Transactions on Medical Imaging (TMI).
+The method is detailed in '[Synthesize High-quality Multi-contrast Magnetic Resonance Imaging from Multi-echo Acquisition Using Multi-task Deep Generative Model](https://ieeexplore.ieee.org/document/9063444)' .
 
 ## Dependencies
 
-The code should work for environment with PyTorch 0.4+. A tested conda environment file has been added (not minimum).
+The code should work for environment with PyTorch 0.4+. A tested Anaconda environment file has been added (not minimum).
 
 ## Usage
 
@@ -16,7 +16,9 @@ The code structure inherits [CycleGAN and pix2pix in PyTorch](https://github.com
 
 ### Data-loader
 
-In the sample magic_dataset.py, we assume that the data pair is stored in .npz archives. However, it is simple to define your own dataloader.
+In the sample magic_dataset.py, we assume that the data pair is stored in .npz archives. However, it is simple to create your own dataloader.
+
+The dataset is GE Healthcare's property and cannot be publicized. If you are interested in using your own data, I would happy to provide assistance on organizing the data (email: guanhuaw@umich.edu).
 
 ### Network
 
@@ -24,7 +26,7 @@ You can use or define your network in networks.py. Several common baseline netwo
 
 ### Visualizer
 
-The package use Visdom as the visualizer. You can define a port with command --display_port (default is 8097, as in basic_options.py). Then you could run 'visdom --port xxxx' to start the visdom server (on local or remote server).
+The package use Visdom as the visualizer. You can define a port with command --display_port (default is 8097, as in basic_options.py). Then you could run 'visdom --port xxxx' to start the visdom service (on a local or remote server).
 
 ### Passing Variables
 
@@ -41,4 +43,4 @@ The framework is built upon Jun-Yan Zhu and Taesung Park's excellent [CycleGAN a
 
 We used the [pytorch-msssim](https://github.com/jorge-pessoa/pytorch-msssim) to calculate the SSIM index.
 
-The dual-task discriminator adopts the idea from [StarGAN](https://github.com/yunjey/StarGAN).
+The dual-task discriminator inherited the idea of [StarGAN](https://github.com/yunjey/StarGAN).

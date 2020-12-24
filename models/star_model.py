@@ -13,7 +13,6 @@ class StarModel(BaseModel):
     def name(self):
         return 'STARModel'
 
-
     def label2onehot(self, batch_size, labels):
         """Convert label indices to one-hot vectors."""
         dim = 6
