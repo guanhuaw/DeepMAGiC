@@ -18,7 +18,7 @@ The code structure inherits [CycleGAN and pix2pix in PyTorch](https://github.com
 
 In the sample magic_dataset.py, we assume that the data pair is stored in .npz archives. However, it is simple to create your own dataloader.
 
-The dataset is GE Healthcare's property and cannot be publicized. If you are interested in using your own data, I would happy to provide assistance on organizing the data (email: guanhuaw@umich.edu).
+The dataset is GE Healthcare's private property and cannot be publicized. If you are interested in using your own dataset, I would be happy to provide assistance in organizing the data (email: guanhuaw@umich.edu).
 
 ### Network
 
